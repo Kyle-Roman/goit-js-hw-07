@@ -1,0 +1,8 @@
+.gallery__item {
+  display: block;
+  margin-right: 20px;
+}
+
+.gallery__item:first-child {
+  margin-left: -30px;
+}
