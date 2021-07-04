@@ -1,8 +1,12 @@
 const inputValue = document.getElementById('validation-input');
 
+inputValue.addEventListener('input', inputValidation);
 
-const inputValidation = inputValue.addEventListener('input', function () {
-    inputValue.textContent.length >= inputValue.dataset.length ?
-        inputValue.classList.replace(#validation - input, #validation - input.valid)
-        : inputValue.classList.replace(#validation - input, #validation - input.invalid);
-});
+
+function inputValidation() {
+
+const inputLength = inputValue.value.length;
+const reqLength = Number(inputValue.dataset.length);
+
+inputLength !== reqLength ? inputValue.classList.add('invalid') : inputValue.classList.replace('invalid', 'valid');
+};
