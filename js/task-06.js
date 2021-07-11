@@ -8,5 +8,11 @@ function inputValidation() {
 const inputLength = inputValue.value.length;
 const reqLength = Number(inputValue.dataset.length);
 
-inputLength !== reqLength ? inputValue.classList.add('invalid') : inputValue.classList.replace('invalid', 'valid');
+    if (inputLength !== reqLength) {
+        inputValue.classList.remove('valid')
+        inputValue.classList.add('invalid')        
+    } else {
+       inputValue.classList.remove('invalid'), 
+       inputValue.classList.add('valid'); 
+   } 
 };
